@@ -10,9 +10,6 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { serialize } from "cookie";
-import { SignJWT } from "jose";
-import { createSecretKey } from "crypto";
 
 const getMimeType = (filePath: string): string => {
   const extension = filePath.split(".").pop();
@@ -28,26 +25,6 @@ const getMimeType = (filePath: string): string => {
       return "application/octet-stream";
   }
 };
-
-export async function createAuthCookie(
-  token: string,
-  maxAge: number,
-  secret: string
-) {
-  const jwt = await new SignJWT({ token })
-    .setProtectedHeader({ alg: "HS256" })
-    .setExpirationTime("24h")
-    .sign(new TextEncoder().encode(secret));
-
-  return serialize("token", jwt, {
-    path: "/",
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge,
-  });
-}
-
 
 export async function registerUser(req: NextRequest) {
   const formData = await req.formData();
