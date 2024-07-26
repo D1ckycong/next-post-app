@@ -1,0 +1,127 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modalTitle {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input, .textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button, .deleteButton {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button {
+  background-color: #0070f3;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.deleteButton {
+  background-color: #e53935;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.charCount {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.charCount.exceed {
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 15px;
+  }
+
+  .input, .textarea {
+    padding: 8px;
+  }
+
+  .button, .deleteButton {
+    padding: 8px 16px;
+  }
+
+  .modalTitle {
+    font-size: 1.2rem;
+  }
+
+  .charCount {
+    font-size: 0.8rem;
+  }
+}

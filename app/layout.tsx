@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import { User } from "@/contexts/AuthContext";
 import { AuthProvider } from "@/app/components/auth/AuthProvider";
 import { serverConfig, clientConfig } from "@/config/config";
+import Header from "@/app/components/common/Header";
 
 const toUser = ({ decodedToken }: Tokens): User => {
   const {
@@ -48,6 +49,7 @@ export default async function RootLayout({
     <html lang="ja">
       <head />
       <body className={user ? "user-logged-in" : ""}>
+        {user && <Header />}
         <main>
           <AuthProvider user={user}>{children}</AuthProvider>
         </main>
