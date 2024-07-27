@@ -1,0 +1,106 @@
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profile {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative; /* relative positioning for the edit button */
+}
+
+.profileDetails {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.profileButtons {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 20px; /* Adjusted to position the buttons inside the profile box */
+  right: 20px; /* Position buttons at the right */
+}
+
+.editProfileButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editProfileButton:hover {
+  background-color: #005bb5;
+}
+
+.logoutButton {
+  padding: 10px 20px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.logoutButton:hover {
+  background-color: #c9302c;
+}
+
+@media (max-width: 600px) {
+  .profile {
+    padding: 15px;
+  }
+
+  .editProfileButton, .logoutButton {
+    padding: 8px 16px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .profileButtons {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    padding: 0;
+  }
+
+  .editProfileButton, .logoutButton {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
