@@ -17,7 +17,11 @@ export async function POST(req: NextRequest) {
 
     return response;
   } catch (error: any) {
-    console.error("Login failed:", error);
+    if (error.code === "auth/invalid-credential"){
+      return NextResponse.json({ success: false, message: "メールアドレスまたはパスワードが間違っています。" });
+    }
+    
+      console.error("Login failed:", error);
     return NextResponse.json({ success: false, message: error.message });
   }
 }

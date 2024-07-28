@@ -113,9 +113,9 @@ next-post-app/
 ## 作業項目
 
 - [x] Next.js 14のfirebase認証についてリサーチ(3h)
-- [ ] next-firebase-auth-edgeのドキュメント確認(3h)
-- [ ] firebase認証/middleware関連の設定(5h)
-- [ ] トップページ作成(5h)
-- [ ] 投稿関連ページ作成(6h)
-- [ ] マイページ作成(4h)
-- [ ] vercelへのリリース(3h)
+- [x] next-firebase-auth-edgeのドキュメント確認(3h)
+- [x] firebase認証/middleware関連の設定(5h)
+- [x] トップページ作成(5h)
+- [x] 投稿関連ページ作成(6h)
+- [x] マイページ作成(4h)
+- [x] vercelへのリリース(3h)
