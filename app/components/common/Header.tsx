@@ -40,7 +40,7 @@ export default function Header() {
           <Link href="/mypage" className={styles.link}>
             マイページ
           </Link>
-          <button onClick={handleOpenModal} className={styles.link}>
+          <button onClick={handleLogout} className={styles.link}>
             <MdLogout style={{ marginRight: "5px" }} />
             ログアウト
           </button>
